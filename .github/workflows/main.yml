@@ -42,4 +42,4 @@ jobs:
     - name: npm install, build and test
       run: |
         npm ci
-        npm test:unit
+        npm run test:unit
