@@ -6,6 +6,10 @@
         "test": "jest --config=jest.config.js"
     },
     "dependencies": {
-        "@types/jest": "^28.1.1"
+        "@koa/router": "^10.1.1",
+        "@types/jest": "^28.1.1",
+        "koa": "^2.13.4",
+        "koa-body": "^5.0.0",
+        "koa-logger": "^3.2.1"
     }
 }
