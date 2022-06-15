@@ -1,9 +1,13 @@
 {
     "devDependencies": {
+        "@stryker-mutator/core": "^6.0.2",
+        "@stryker-mutator/jest-runner": "^6.0.2",
         "jest": "^28.1.1"
     },
     "scripts": {
-        "test:unit": "jest --config=jest.config.js"
+        "test:jest": "jest --config=jest.config.js",
+        "test:mutation": "npx stryker run",
+        "test:unit": "npm run test:jest && npm run test:mutation"
     },
     "dependencies": {
         "@koa/router": "^10.1.1",
