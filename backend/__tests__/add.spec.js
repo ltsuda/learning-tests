@@ -1,4 +1,4 @@
-const { add } = require("../src/addition/add")
+const { add } = require("../src/add/add")
 
 describe("Addition tests", () => {
     test("1 + 1 should be 2", () => {
