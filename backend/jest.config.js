@@ -41,14 +41,14 @@ module.exports = {
     ],
 
     // An object that configures minimum threshold enforcement for coverage results
-    coverageThreshold: {
-        global: {
-            branches: 90,
-            functions: 90,
-            lines: 90,
-            statements: 90,
-        },
-    },
+    // coverageThreshold: {
+    //     global: {
+    //         branches: 90,
+    //         functions: 90,
+    //         lines: 90,
+    //         statements: 90,
+    //     },
+    // },
     // A path to a custom dependency extractor
     // dependencyExtractor: undefined,
 
@@ -126,10 +126,10 @@ module.exports = {
     // restoreMocks: false,
 
     // The root directory that Jest should scan for tests and modules within
-    // rootDir: "backend",
+    // rootDir: "",
 
     // A list of paths to directories that Jest should use to search for files in
-    roots: ["backend"],
+    // roots: [],
 
     // Allows you to use a custom runner instead of Jest's default test runner
     // runner: "jest-runner",
