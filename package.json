@@ -1,0 +1,22 @@
+{
+  "name": "learning-tests",
+  "version": "1.0.0",
+  "description": "Unit, Integration, Contract, API and E2E",
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ltsuda/learning-tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ltsuda/learning-tests/issues"
+  },
+  "homepage": "https://github.com/ltsuda/learning-tests#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.23.0-alpha-jun-20-2022"
+  }
+}
