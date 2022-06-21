@@ -5,6 +5,7 @@
         "jest": "^28.1.1"
     },
     "scripts": {
+        "start": "node src/app.js",
         "test:jest": "jest --config=jest.config.js",
         "test:mutation": "npx stryker run",
         "test:unit": "npm run test:jest && npm run test:mutation"
