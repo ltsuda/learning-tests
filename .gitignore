@@ -3,7 +3,9 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,macos,vscode,xcode
 
 ### User ###
-output
+output/
+test-results/
+playwright-report/
 
 ### macOS ###
 # General
