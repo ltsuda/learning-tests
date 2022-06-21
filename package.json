@@ -4,7 +4,7 @@
   "description": "Unit, Integration, Contract, API and E2E",
   "workspaces": ["backend", "frontend"],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:api": "npx playwright test -c playwright-api.config.js "
   },
   "repository": {
     "type": "git",

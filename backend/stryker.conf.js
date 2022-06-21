@@ -19,6 +19,8 @@ module.exports = {
         "!{src,lib}/**/__tests__/**/*.js?(x)",
         "!{src,lib}/**/?(*.)+(spec|test).js?(x)",
         "!{src,lib}/**/*+(Spec|Test).js?(x)",
+        "!{src,lib}/routes/**/*.js",
+        "!{src,lib}/app.js",
     ],
     coverageAnalysis: "perTest",
     ignoreStatic: true,

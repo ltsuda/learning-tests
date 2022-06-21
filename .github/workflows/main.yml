@@ -43,3 +43,40 @@ jobs:
       run: |
         npm ci
         npm run test:unit -w backend
+
+  backend-api:
+    needs: backend-unit
+
+    name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node_version: ['16']
+        os: [ubuntu-22.04, ubuntu-20.04, macos-12, macos-11]
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v3.3.0
+      with:
+        node-version: ${{ matrix.node_version }}
+
+    # https://github.com/actions/cache/blob/main/examples.md#node---npm
+    - name: Get npm cache directory
+      id: npm-cache-dir
+      run: |
+        echo "::set-output name=dir::$(npm config get cache)"
+
+    - uses: actions/cache@v3
+      id: npm-cache
+      with:
+        path: ${{ steps.npm-cache-dir.outputs.dir }}
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - name: npm install and test
+      run: |
+        npm ci
+        npm run test:api
