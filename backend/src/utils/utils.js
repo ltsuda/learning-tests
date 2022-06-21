@@ -5,8 +5,8 @@ function validateOperands(operand1, operand2) {
         return {
             message: "Operands are not defined or are not a number",
             operands: {
-                operand1: operand1,
-                operand2: operand2,
+                operand1: operand1 ? operand1 : null,
+                operand2: operand2 ? operand2 : null,
             },
         }
     } else {

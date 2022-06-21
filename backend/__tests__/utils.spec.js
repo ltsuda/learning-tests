@@ -27,7 +27,7 @@ describe("Utils tests", () => {
             message: "Operands are not defined or are not a number",
             operands: {
                 operand1: 11,
-                operand2: undefined,
+                operand2: null,
             },
         })
     })

@@ -26,3 +26,12 @@ test("1 + 'abc' should result in 400", async ({ request }) => {
         operands: { operand1: "1", operand2: "abc" },
     })
 })
+
+test("Missing input should result in 400", async ({ request }) => {
+    const response = await request.post("/math/add", { params: { operand1: 500 } })
+    expect(response.status()).toEqual(400)
+    expect(await response.json()).toEqual({
+        message: "Operands are not defined or are not a number",
+        operands: { operand1: "500", operand2: null },
+    })
+})
