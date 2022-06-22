@@ -9,12 +9,12 @@ test("1024 * 2 should be 2048", async ({ request }) => {
     })
 })
 
-test("11 * -11 should be -121", async ({ request }) => {
-    const response = await request.post("/math/multiply", { params: { operand1: 11, operand2: -11 } })
+test("11.10 * -11.11 should be -121", async ({ request }) => {
+    const response = await request.post("/math/multiply", { params: { operand1: 11.10, operand2: -11.11 } })
     expect(response.status()).toEqual(200)
     expect(await response.json()).toEqual({
         message: "OK",
-        result: -121,
+        result: -123.321,
     })
 })
 

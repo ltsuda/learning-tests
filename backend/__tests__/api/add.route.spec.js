@@ -9,8 +9,8 @@ test("120 + 1 should be 121", async ({ request }) => {
     })
 })
 
-test("-101 + 101 should be 0", async ({ request }) => {
-    const response = await request.post("/math/add", { params: { operand1: -101, operand2: 101 } })
+test("-101.10 + 101.10 should be 0", async ({ request }) => {
+    const response = await request.post("/math/add", { params: { operand1: -101.10, operand2: 101.10 } })
     expect(response.status()).toEqual(200)
     expect(await response.json()).toEqual({
         message: "OK",
