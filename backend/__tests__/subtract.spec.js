@@ -11,8 +11,9 @@ describe("Subtraction tests", () => {
         expect(result).toEqual(-10)
     })
 
-    test("-11 - -11 should be 0", () => {
-        result = subtract(-11, -11)
-        expect(result).toEqual(0)
+    test("-11 - -15.5 should be 4.5", () => {
+        result = subtract(-11, -15.5)
+        console.log(result)
+        expect(result).toEqual(4.5)
     })
 })

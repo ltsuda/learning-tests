@@ -16,8 +16,8 @@ describe("Division tests", () => {
         expect(result).toEqual(0.5)
     })
 
-    test("5 / 14 should be 0.357", () => {
-        result = divide(5, 14)
-        expect(result).toEqual(0.357)
+    test("5 / 10 should be 0.5", () => {
+        result = divide(5, 10)
+        expect(result).toEqual(0.5)
     })
 })
