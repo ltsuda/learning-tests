@@ -11,8 +11,8 @@ describe("Multiplication tests", () => {
         expect(result).toEqual(0)
     })
 
-    test("-5 * 2 should be -10", () => {
-        result = multiply(-5, 2)
-        expect(result).toEqual(-10)
+    test("-5 * 2.3 should be -11.555", () => {
+        result = multiply(-5, 2.311)
+        expect(result).toEqual(-11.555)
     })
 })

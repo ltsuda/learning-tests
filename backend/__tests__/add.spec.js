@@ -11,8 +11,8 @@ describe("Addition tests", () => {
         expect(result).toEqual(-4)
     })
 
-    test("0 + 10 should be 10", () => {
-        result = add(0, 10)
-        expect(result).toEqual(10)
+    test("0.1 + 10 should be 10.1", () => {
+        result = add(0.1, 10)
+        expect(result).toEqual(10.1)
     })
 })
