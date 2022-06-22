@@ -12,14 +12,15 @@ function validateOperands(operand1, operand2) {
     } else {
         return {
             message: "OK",
-            operands: {
-                operand1: op1,
-                operand2: op2,
-            },
         }
     }
 }
 
+function toThreeMaxDecimal(result) {
+    return Number(result.toFixed(3))
+}
+
 module.exports = {
     validateOperands,
+    toThreeMaxDecimal,
 }
