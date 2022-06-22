@@ -1,14 +1,14 @@
 const Router = require("@koa/router")
 const router = new Router()
-const { subtract } = require("../../subtract/subtract")
+const { subtraction } = require("../../subtraction/subtraction")
 const { toThreeMaxDecimal, validateOperands } = require("../../utils/utils")
 
-router.post("/subtract", (ctx) => {
+router.post("/subtraction", (ctx) => {
     const operand1 = ctx.request.query.operand1
     const operand2 = ctx.request.query.operand2
     const parsedQuery = validateOperands(operand1, operand2)
     if (parsedQuery.message === "OK") {
-        const result = subtract(operand1, operand2)
+        const result = subtraction(operand1, operand2)
         const parsedResult = toThreeMaxDecimal(result)
         ctx.response.status = 200
         ctx.body = {
@@ -25,5 +25,5 @@ router.post("/subtract", (ctx) => {
 })
 
 module.exports = {
-    subtractRouter: router,
+    subtractionRouter: router,
 }

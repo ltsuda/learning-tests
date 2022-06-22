@@ -9,8 +9,8 @@ Initial thoughts
 -   KoaJS server
     -   Endpoints
         -   /addition
-        -   /subtract
-        -   /multiply
+        -   /subtraction
+        -   /multiplication
         -   /division
         -   /driversLicense
     -   NOTE: only two operands
@@ -25,8 +25,8 @@ Initial thoughts
 -   Any framework or basic HTML
     -   Pages
         -   /addition
-        -   /subtract
-        -   /multiply
+        -   /subtraction
+        -   /multiplication
         -   /division
         -   /driversLicense
     -   NOTE: or only root page with destination endpoint tied to operator dropdown

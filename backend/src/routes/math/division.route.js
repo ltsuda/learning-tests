@@ -1,14 +1,14 @@
 const Router = require("@koa/router")
 const router = new Router()
-const { divide } = require("../../divide/divide")
+const { division } = require("../../division/division")
 const { toThreeMaxDecimal, validateOperands } = require("../../utils/utils")
 
-router.post("/divide", (ctx) => {
+router.post("/division", (ctx) => {
     const operand1 = ctx.request.query.operand1
     const operand2 = ctx.request.query.operand2
     const parsedQuery = validateOperands(operand1, operand2)
     if (parsedQuery.message === "OK") {
-        const result = divide(operand1, operand2)
+        const result = division(operand1, operand2)
         if (result === Infinity) {
             ctx.response.status = 400
             ctx.body = {
@@ -36,5 +36,5 @@ router.post("/divide", (ctx) => {
 })
 
 module.exports = {
-    divideRouter: router,
+    divisionRouter: router,
 }

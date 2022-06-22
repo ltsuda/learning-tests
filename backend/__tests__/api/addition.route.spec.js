@@ -1,7 +1,7 @@
 const { test, expect } = require("@playwright/test")
 
 test("120 + 1 should be 121", async ({ request }) => {
-    const response = await request.post("/math/add", { params: { operand1: 120, operand2: 1 } })
+    const response = await request.post("/math/addition", { params: { operand1: 120, operand2: 1 } })
     expect(response.status()).toEqual(200)
     expect(await response.json()).toEqual({
         message: "OK",
@@ -10,7 +10,7 @@ test("120 + 1 should be 121", async ({ request }) => {
 })
 
 test("-101.10 + 101.10 should be 0", async ({ request }) => {
-    const response = await request.post("/math/add", { params: { operand1: -101.10, operand2: 101.10 } })
+    const response = await request.post("/math/addition", { params: { operand1: -101.10, operand2: 101.10 } })
     expect(response.status()).toEqual(200)
     expect(await response.json()).toEqual({
         message: "OK",
@@ -19,7 +19,7 @@ test("-101.10 + 101.10 should be 0", async ({ request }) => {
 })
 
 test("1 + 'abc' should result in 400", async ({ request }) => {
-    const response = await request.post("/math/add", { params: { operand1: 1, operand2: "abc" } })
+    const response = await request.post("/math/addition", { params: { operand1: 1, operand2: "abc" } })
     expect(response.status()).toEqual(400)
     expect(await response.json()).toEqual({
         message: "Operands are not defined or are not a number",
@@ -28,7 +28,7 @@ test("1 + 'abc' should result in 400", async ({ request }) => {
 })
 
 test("Missing input should result in 400", async ({ request }) => {
-    const response = await request.post("/math/add", { params: { operand1: 500 } })
+    const response = await request.post("/math/addition", { params: { operand1: 500 } })
     expect(response.status()).toEqual(400)
     expect(await response.json()).toEqual({
         message: "Operands are not defined or are not a number",
