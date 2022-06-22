@@ -1,18 +1,19 @@
 const Router = require("@koa/router")
 const router = new Router()
 const { multiply } = require("../../multiply/multiply")
-const { validateOperands } = require("../../utils/utils")
+const { toThreeMaxDecimal, validateOperands } = require("../../utils/utils")
 
 router.post("/multiply", (ctx) => {
     const operand1 = ctx.request.query.operand1
     const operand2 = ctx.request.query.operand2
     const parsedQuery = validateOperands(operand1, operand2)
     if (parsedQuery.message === "OK") {
-        const result = multiply(parsedQuery.operands.operand1, parsedQuery.operands.operand2)
+        const result = multiply(operand1, operand2)
+        const parsedResult = toThreeMaxDecimal(result)
         ctx.response.status = 200
         ctx.body = {
             message: parsedQuery.message,
-            result: result,
+            result: parsedResult,
         }
     } else {
         ctx.status = 400
