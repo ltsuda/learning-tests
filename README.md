@@ -12,10 +12,10 @@ Initial thoughts
         -   /subtract
         -   /multiply
         -   /division
+        -   /driversLicense
     -   NOTE: only two operands
 -   Tests
     -   Unit for operation functions
-    -   Integration for mocked endpoints responses (?)
     -   API for endpoint interactions
     -   Contract between Server and Frontend (1)
         -   Must study to understand if this is the correct type of test
@@ -28,7 +28,9 @@ Initial thoughts
         -   /subtract
         -   /multiply
         -   /division
+        -   /driversLicense
     -   NOTE: or only root page with destination endpoint tied to operator dropdown
 -   Tests
+    -   Integration/Component for mocked endpoints responses (?)
     -   E2E
     -   (1) Contract, see backend section for details [Backend](#backend)
