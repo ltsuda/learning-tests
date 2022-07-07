@@ -1,0 +1,44 @@
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: black;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .brand {
+    display: block;
+    color: black;
+    padding: 0 24px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar ul li a {
+    color: black;
+    padding: 24px;
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+}
+
+.navbar ul a:hover,
+.navbar ul a:focus,
+.navbar ul .active {
+    background-color: lightblue;
+}
