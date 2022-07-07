@@ -22,14 +22,12 @@ Initial thoughts
 
 ## Frontend
 
--   [ ] Any framework or basic HTML
+-   [ ] Svelte
     -   [ ] Pages
-        -   [ ] /addition
-        -   [ ] /subtraction
-        -   [ ] /multiplication
-        -   [ ] /division
-        -   [ ] /driversLicense
-    -   NOTE: or only root page with destination endpoint tied to operator dropdown
+        -   [ ] /
+        -   [ ] /license
+        -   [ ] /math
+            - NOTE: operation selector directs the request to the correct API endpoint
 -   [ ] Tests
     -   [ ] Integration/Component for mocked endpoints responses (?)
     -   [ ] E2E
