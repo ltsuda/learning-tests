@@ -18,6 +18,6 @@
     </div>
 
     <div class="answer-container" data-id="answer-container">
-        <p>Here is the response</p>
+        <p />
     </div>
 </div>

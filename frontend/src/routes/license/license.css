@@ -1,8 +1,3 @@
-.svelte-content {
-    display: flex;
-    flex-direction: column;
-}
-
 .question-container,
 .input-age-container,
 .answer-container {
