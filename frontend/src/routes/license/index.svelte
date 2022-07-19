@@ -13,7 +13,9 @@
     <div class="input-age-container" data-id="input-age-container">
         <Input class_name="input-age" data_id="input-age" />
     </div>
-    <Button />
+    <div class="button-container" data-id="button-container">
+        <Button />
+    </div>
 
     <div class="answer-container" data-id="answer-container">
         <p>Here is the response</p>

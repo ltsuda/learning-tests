@@ -1,15 +1,6 @@
-<div class="button-container" data-id="button-container">
-    <button type="button" class="button-submit" data-id="button-submit">Submit</button>
-</div>
+<button type="button" class="button-submit" data-id="button-submit">Submit</button>
 
 <style>
-    .button-container {
-        margin: 0;
-        max-width: 200px;
-        min-width: 160px;
-        width: 200px;
-        flex: 20%;
-    }
     button {
         width: 100%;
         height: 64px;
