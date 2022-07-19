@@ -2,6 +2,7 @@
     import "./license.css"
     import { activeNavItem } from "../../components/stores"
     activeNavItem.set("license")
+    import Input from "../../components/input/input.svelte"
     import Button from "../../components/button/Button.svelte"
 </script>
 
@@ -10,16 +11,7 @@
         <p>What is your age?</p>
     </div>
     <div class="input-age-container" data-id="input-age-container">
-        <input
-            type="text"
-            placeholder="Age"
-            class="input-age"
-            data-id="input-age"
-            maxlength="3"
-            min="1"
-            max="150"
-            required
-        />
+        <Input class_name="input-age" data_id="input-age" />
     </div>
     <Button />
 
