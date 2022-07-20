@@ -11,7 +11,7 @@
         <p>What is your age?</p>
     </div>
     <div class="input-age-container" data-id="input-age-container">
-        <Input class_name="input-age" data_id="input-age" />
+        <Input class_name="input-age" data_id="input-age" min="1" max="150" placeholder="Age" maxlength="3" />
     </div>
     <div class="button-container" data-id="button-container">
         <Button />

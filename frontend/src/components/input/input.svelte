@@ -1,11 +1,11 @@
 <script>
     export let class_name
     export let data_id
+    export let maxlength
+    export let min
+    export let max
+    export let placeholder
     export let type = "text"
-    export let placeholder = "Age"
-    export let maxlength = "3"
-    export let min = "1"
-    export let max = "150"
     export let pattern = "[0-9]{1,3}"
 </script>
 
