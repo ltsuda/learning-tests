@@ -5,11 +5,22 @@
     export let min
     export let max
     export let placeholder
-    export let type = "text"
     export let pattern = "[0-9]{1,3}"
+    export let value
 </script>
 
-<input class={class_name} data-id={data_id} {type} {placeholder} {maxlength} {min} {max} {pattern} required />
+<input
+    class={class_name}
+    data-id={data_id}
+    {placeholder}
+    {maxlength}
+    {min}
+    {max}
+    {pattern}
+    type="text"
+    bind:value
+    required
+/>
 
 <style>
     input::-webkit-outer-spin-button,
