@@ -6,6 +6,8 @@
     import Button from "../../components/button/Button.svelte"
     import Input from "../../components/input/input.svelte"
     let inputPattern = "-?[0-9]{1,4}"
+    let operand1,
+        operand2 = undefined
 </script>
 
 <div class="svelte-content" data-id="svelte-content">
@@ -14,9 +16,21 @@
         <p class="instruction-description">(only four digits operands)</p>
     </div>
     <div class="select-operation-container">
-        <Input class_name="first-operand" data_id="first-operand" placeholder="Operand 1" pattern={inputPattern} />
+        <Input
+            class_name="first-operand"
+            data_id="first-operand"
+            bind:value={operand1}
+            placeholder="Operand 1"
+            pattern={inputPattern}
+        />
         <Select class_name="select-operation" data_id="select-operation" />
-        <Input class_name="second-operand" data_id="second-operand" placeholder="Operand 2" maxlength="255" />
+        <Input
+            class_name="second-operand"
+            data_id="second-operand"
+            bind:value={operand2}
+            placeholder="Operand 2"
+            maxlength="255"
+        />
     </div>
     <div class="button-container" data-id="button-container">
         <Button />
