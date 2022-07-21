@@ -3,14 +3,10 @@ a {
 }
 
 .navbar {
-    background-color: whitesmoke;
+    background-color: #4a4e69;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.navbar a {
-    color: black;
 }
 
 .navbar ul {
@@ -23,15 +19,13 @@ a {
 
 .navbar .brand {
     display: block;
-    color: black;
-    padding: 0 24px;
+    color: #f2e9e4;
     font-size: 24px;
     font-weight: bold;
 }
 
 .navbar ul li a {
-    color: black;
-    padding: 24px;
+    color: #f2e9e4;
     font-size: 24px;
     font-weight: bold;
     display: block;
@@ -40,5 +34,5 @@ a {
 .navbar ul a:hover,
 .navbar ul a:focus,
 .navbar ul .active {
-    background-color: lightblue;
+    background-color: #9a8c98;
 }
