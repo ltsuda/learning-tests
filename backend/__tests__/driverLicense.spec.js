@@ -13,4 +13,12 @@ describe("Driver's license tests", () => {
         result = validateAge(14)
         expect(result).toEqual("No license allowed for your age")
     })
+    test("should return error message if age is not a number", () => {
+        result = validateAge("abc")
+        expect(result).toEqual("Age is not defined or are not a number")
+    })
+    test("should return error message if age is undefined", () => {
+        result = validateAge()
+        expect(result).toEqual("Age is not defined or are not a number")
+    })
 })
