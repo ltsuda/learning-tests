@@ -1,6 +1,7 @@
 const Koa = require("koa")
 const app = new Koa()
 const bodyParser = require("koa-body")
+const cors = require('@koa/cors');
 
 const { mainRouter } = require("./routes/routes")
 
@@ -9,6 +10,7 @@ mainRouter.get("/", (ctx) => {
     ctx.body = "Welcome to KoaJS!"
 })
 
+app.use(cors());
 app.use(bodyParser())
 app.use(mainRouter.routes())
 

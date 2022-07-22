@@ -11,6 +11,7 @@
         "test:unit": "npm run test:jest && npm run test:mutation"
     },
     "dependencies": {
+        "@koa/cors": "^3.3.0",
         "@koa/router": "^10.1.1",
         "@types/jest": "^28.1.1",
         "koa": "^2.13.4",
