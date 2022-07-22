@@ -2,10 +2,8 @@
     export let class_name
     export let data_id
     export let maxlength
-    export let min
-    export let max
     export let placeholder
-    export let pattern = "[0-9]{1,3}"
+    export let pattern
     export let value
 </script>
 
@@ -14,11 +12,10 @@
     data-id={data_id}
     {placeholder}
     {maxlength}
-    {min}
-    {max}
     {pattern}
     type="text"
     bind:value
+    on:input
     required
 />
 

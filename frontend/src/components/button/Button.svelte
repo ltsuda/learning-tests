@@ -1,4 +1,8 @@
-<button type="button" class="button-submit" data-id="button-submit">Submit</button>
+<script>
+    export let isDisabled
+</script>
+
+<button type="button" class="button-submit" data-id="button-submit" disabled={isDisabled} on:click>Submit</button>
 
 <style>
     button {
@@ -11,7 +15,6 @@
         letter-spacing: 1px;
         border: none;
         font-size: 18px;
-        /* font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; */
         cursor: pointer;
     }
     button:hover,
