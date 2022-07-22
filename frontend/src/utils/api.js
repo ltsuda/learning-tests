@@ -1,4 +1,4 @@
-import fetch from "node-fetch"
+// import fetch from "node-fetch"
 
 const baseAPI = new URL("http://localhost:3000")
 
@@ -10,23 +10,21 @@ async function send({ method, path, params }) {
     }
     const url = path.startsWith("/") ? `${baseAPI.origin}${path}` : `${baseAPI.origin}/${path}`
 
-    return fetch(`${url}${baseAPI.search}`, options)
-        .then((response) => {
-            return response.text()
-        })
-        .then((json) => {
-            try {
-                const parsed = JSON.parse(json)
-                return parsed
-            } catch (err) {
-                return json
-            }
-        })
+    const response = await fetch(`${url}${baseAPI.search}`, options)
+    try {
+        return await response.json()
+    } catch (err) {
+        return await response.text()
+    }
 }
 
-export function get(path) {
-    return send({ method: "GET", path })
+async function post(path, params) {
+    return await send({ method: "POST", path, params })
 }
-export function post(path, params) {
-    return send({ method: "POST", path, params })
+export async function get(path) {
+    return await send({ method: "GET", path })
+}
+
+export async function driver(path, params) {
+    return await post(`/driver/${path}`, params)
 }
